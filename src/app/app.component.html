@@ -20,10 +20,10 @@
 </div>
 
 <div>
-  <button (click)="onButtonClick()">Generate</button>
+  <button [disabled]="!(passLength && ( includeLetters || includeNumbers || includeSymbols))" (click)="onButtonClick()">Generate</button>
 </div>
 
 <div>
   <label >Your Password</label>
-  <input />
+  <input [value]="password" />
 </div>

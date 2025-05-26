@@ -1,29 +1,10 @@
-<h1>Password Generator</h1>
+<!-- <app-password-generator></app-password-generator> -->
 
-<div>
-  <label >Enter Length</label>
-   <input (input)="onChangeLength($event)" />
-</div>
 
-<div>
-  <label >Use letters</label>
-  <input (change)="onChangeUseLetters($event)" type="checkbox"/>
-</div>
 
-<div>
-  <label >Use numbers</label>
-  <input (change)="onChangeUseNumbers($event)" type="checkbox"/>
-</div>
-<div>
-  <label >Use symbols</label>
-  <input (change)="onChangeUseSymbols($event)" type="checkbox"/>
-</div>
-
-<div>
-  <button [disabled]="!(passLength && ( includeLetters || includeNumbers || includeSymbols))" (click)="onButtonClick()">Generate</button>
-</div>
-
-<div *ngIf="password">
-  <label >Your Password</label>
-  <input [value]="password" />
-</div>
+<app-card *ngFor="let post of posts"
+[title]="post.title" 
+[imageUrl]="post.imageUrl"
+[username]="post.username"
+[content]="post.content">
+</app-card>

@@ -3,13 +3,14 @@ import { CommonModule } from '@angular/common';
 import { RouterOutlet } from '@angular/router';
 import { PasswordGeneratorComponent } from './password-generator/password-generator.component';
 import { CardComponent } from "./card/card.component";
+import { TypingComponent } from "./typing/typing.component";
 
 @Component({
     selector: 'app-root',
     standalone: true,
     templateUrl: './app.component.html',
     styleUrl: './app.component.css',
-    imports: [CommonModule, RouterOutlet, PasswordGeneratorComponent, CardComponent]
+    imports: [CommonModule, RouterOutlet, PasswordGeneratorComponent, CardComponent, TypingComponent]
 })
 export class AppComponent {
   title = 'pw';

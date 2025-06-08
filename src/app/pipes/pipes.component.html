@@ -1,0 +1,49 @@
+<div class="container">
+    {{ car | json }}
+    <h3 class="title is-3">Payment Form</h3>
+
+    <div class="columns">
+        <!-- Input Column - 50% width -->
+        <div class="column is-half">
+            <div class="field">
+                <label class="label">Payee Name</label>
+                <div class="control">
+                    <input class="input" type="text" (input)="onNameChange($event)" />
+                </div>
+            </div>
+            <div class="field">
+                <label class="label">Payment Date</label>
+                <div class="control">
+                    <input class="input" type="date" (input)="onDateChange($event)" />
+                </div>
+            </div>
+            <div class="field">
+                <label class="label">Amount:</label>
+                <div class="control">
+                    <input class="input" type="number" (input)="onAmountChange($event)" />
+                </div>
+            </div>
+            <div class="field">
+                <label class="label">Miles:</label>
+                <div class="control">
+                    <input class="input" type="number" (input)="onMilesChange($event)" />
+                </div>
+            </div>
+        </div>
+
+        <!-- Output Column - 50% width -->
+        <div class="column is-half">
+            <label class="label"><strong>Name</strong></label>
+            <div>{{ name | titlecase }}</div>
+
+            <label class="label"><strong>Payment Date</strong></label>
+            <div>{{ date | date: 'MMMM d, y' }}</div>
+           
+            <label class="label"><strong>Amount:</strong></label>
+            <div>{{ amount | currency: 'MXN'}}</div>
+            
+            <label class="label"><strong>Kilometers:</strong></label>
+            <div>{{ miles | convert: 'km'}}</div>
+        </div>
+    </div>
+</div>

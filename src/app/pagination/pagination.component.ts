@@ -16,14 +16,14 @@ export class PaginationComponent {
   }
 
   images = [
-    { url: 'https://picsum.photos/id/1/200/300', title: 'Image 1' },
-    { url: 'https://picsum.photos/id/2/200/300', title: 'Image 2' },
-    { url: 'https://picsum.photos/id/3/200/300', title: 'Image 3' },
-    { url: 'https://picsum.photos/id/4/200/300', title: 'Image 4' },
-    { url: 'https://picsum.photos/id/5/200/300', title: 'Image 5' },
-    { url: 'https://picsum.photos/id/6/200/300', title: 'Image 6' },
-    { url: 'https://picsum.photos/id/7/200/300', title: 'Image 7' },
-    { url: 'https://picsum.photos/id/8/200/300', title: 'Image 8' }
+    { url: 'https://picsum.photos/id/11/200/300', title: 'Image 1' },
+    { url: 'https://picsum.photos/id/12/200/300', title: 'Image 2' },
+    { url: 'https://picsum.photos/id/13/200/300', title: 'Image 3' },
+    { url: 'https://picsum.photos/id/14/200/300', title: 'Image 4' },
+    { url: 'https://picsum.photos/id/15/200/300', title: 'Image 5' },
+    { url: 'https://picsum.photos/id/16/200/300', title: 'Image 6' },
+    { url: 'https://picsum.photos/id/17/200/300', title: 'Image 7' },
+    { url: 'https://picsum.photos/id/18/200/300', title: 'Image 8' }
   ];
 
   currentPage = 0;

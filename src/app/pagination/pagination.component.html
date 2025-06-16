@@ -1,11 +1,11 @@
 <nav class="pagination is-centered" role="navigation" aria-label="pagination">
   <a class="pagination-previous"
-     [class.is-disabled]="currentPage === 0"
+     [appClass]="{'is-disabled':currentPage === 0}"
      (click)="previousPage()">
     Previous
   </a>
   <a class="pagination-next"
-     [class.is-disabled]="currentPage === images.length - 1"
+     [appClass]="{'is-disabled': currentPage === images.length - 1}"
      (click)="nextPage()">
     Next page
   </a>
@@ -26,8 +26,8 @@
 <div class="columns is-centered">
   <div class="column is-6">
     <div class="card" *ngIf="images && images.length">
-        <div class="card-content has-text-centered" >
-          <p appClass [backgroundColor]="'pink'" class="title is-6">{{ images[currentPage].title }}</p>
+        <div class="card-content has-text-centered" [appClass]="{'backgroundColor': 'red'}">
+          <p  class="title is-6">{{ images[currentPage].title }}</p>
         </div>
       <div class="card-image has-text-centered">
         <figure class="image " style="margin: auto;">

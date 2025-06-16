@@ -1,4 +1,4 @@
-import { Directive, ElementRef } from '@angular/core';
+import { Directive, ElementRef, Input, input } from '@angular/core';
 
 @Directive({
   selector: '[appClass]',
@@ -6,8 +6,13 @@ import { Directive, ElementRef } from '@angular/core';
 })
 export class ClassDirective {
 
+
   constructor(private element : ElementRef) {
-    this.element.nativeElement.style.backgroundColor = 'lightblue';
+   }
+   
+  // Sets the background color of the host element whenever the input value changes
+   @Input() set backgroundColor(color: string) {
+    this.element.nativeElement.style.backgroundColor = color;
    }
 
 

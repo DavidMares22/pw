@@ -5,6 +5,7 @@ import { PasswordGeneratorComponent } from './password-generator/password-genera
 import { CardComponent } from "./card/card.component";
 import { TypingComponent } from "./typing/typing.component";
 import { PipesComponent } from './pipes/pipes.component';
+import { PaginationComponent } from './pagination/pagination.component';
 
 @Component({
     selector: 'app-root',
@@ -13,10 +14,11 @@ import { PipesComponent } from './pipes/pipes.component';
     styleUrl: './app.component.css',
     imports: [CommonModule, RouterOutlet, 
       PasswordGeneratorComponent, CardComponent,
-       TypingComponent, PipesComponent]
+       TypingComponent, PipesComponent, PaginationComponent]
 })
 export class AppComponent {
   title = 'pw';
+  
   posts = [
     { title: 'Tree', imageUrl: 'assets/tree.jpeg ', username: '@User1 ', content: 'Content of Post 1' },
     { title: 'Biking', imageUrl: 'assets/biking.jpeg ', username: '@User2 ', content: 'Content of Post 2' },

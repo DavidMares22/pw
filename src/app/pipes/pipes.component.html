@@ -43,7 +43,9 @@
             <div>{{ amount | currency: 'MXN'}}</div>
             
             <label class="label"><strong>Kilometers:</strong></label>
-            <div>{{ miles | convert: 'km'}}</div>
+            <!-- <div *ngIf="(miles | convert: 'km') > 10"> -->
+            <div>
+                {{ miles | convert: 'km' | number : '1.0-2'}}</div>
         </div>
     </div>
 </div>

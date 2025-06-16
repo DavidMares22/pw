@@ -1,0 +1,39 @@
+<nav class="pagination is-centered" role="navigation" aria-label="pagination">
+  <a class="pagination-previous"
+     [class.is-disabled]="currentPage === 0"
+     (click)="previousPage()">
+    Previous
+  </a>
+  <a class="pagination-next"
+     [class.is-disabled]="currentPage === images.length - 1"
+     (click)="nextPage()">
+    Next page
+  </a>
+  <ul class="pagination-list">
+    <ng-container *ngFor="let image of images; let i = index">
+    <li *ngIf="checkWindowIndex(i)">
+      <a
+        class="pagination-link"
+        [class.is-current]="i === currentPage"
+        [attr.aria-label]="'Page ' + (i + 1)"
+        (click)="currentPage = i"
+      >{{ i + 1 }}</a>
+    </li>
+    </ng-container>
+  </ul>
+</nav>
+
+<div class="columns is-centered">
+  <div class="column is-6">
+    <div class="card" *ngIf="images && images.length">
+        <div class="card-content has-text-centered" appClass>
+          <p class="title is-6">{{ images[currentPage].title }}</p>
+        </div>
+      <div class="card-image has-text-centered">
+        <figure class="image " style="margin: auto;">
+          <img [src]="images[currentPage].url" [alt]="images[currentPage].title">
+        </figure>
+      </div>
+    </div>
+  </div>
+</div>

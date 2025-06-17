@@ -10,7 +10,8 @@
     Next page
   </a>
   <ul class="pagination-list">
-    <ng-container *ngFor="let image of images; let i = index">
+    <!-- <ng-container *ngFor="let image of images; let i = index"> -->
+    <ng-container *appTimes="images.length; let i = index">
     <li *ngIf="checkWindowIndex(i)">
       <a
         class="pagination-link"

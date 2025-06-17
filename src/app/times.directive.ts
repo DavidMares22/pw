@@ -20,7 +20,9 @@ export class TimesDirective {
     this.viewContainer.clear(); // Remove any previously rendered views
     for (let i = 0; i < times; i++) {
       // Add a new instance of the template for each iteration
-      this.viewContainer.createEmbeddedView(this.templateRef, { });
+      this.viewContainer.createEmbeddedView(this.templateRef, {
+        index: i
+       });
     }
   }
 

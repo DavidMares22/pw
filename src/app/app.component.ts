@@ -6,6 +6,7 @@ import { CardComponent } from "./card/card.component";
 import { TypingComponent } from "./typing/typing.component";
 import { PipesComponent } from './pipes/pipes.component';
 import { PaginationComponent } from './pagination/pagination.component';
+import { TimesDirective } from './times.directive';
 
 @Component({
     selector: 'app-root',
@@ -14,7 +15,7 @@ import { PaginationComponent } from './pagination/pagination.component';
     styleUrl: './app.component.css',
     imports: [CommonModule, RouterOutlet, 
       PasswordGeneratorComponent, CardComponent,
-       TypingComponent, PipesComponent, PaginationComponent]
+       TypingComponent, PipesComponent, PaginationComponent, TimesDirective]
 })
 export class AppComponent {
   title = 'pw';

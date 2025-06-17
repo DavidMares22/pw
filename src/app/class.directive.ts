@@ -23,8 +23,8 @@ export class ClassDirective {
         }
       } else if (typeof value === 'string') {
         // Convert camelCase to kebab-case for CSS property
-        const styleKey = key.replace(/([A-Z])/g, '-$1').toLowerCase();
-        this.element.nativeElement.style[styleKey] = value;
+        // const styleKey = key.replace(/([A-Z])/g, '-$1').toLowerCase();
+        this.element.nativeElement.style[key] = value;
       }
     }
   }
